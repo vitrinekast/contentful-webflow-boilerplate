@@ -1,8 +1,22 @@
 # Combine contentful with webflow devlink
 Grab your API keys for devlink as described in the [documentation](https://docs.developers.webflow.com/data/docs/devlink-documentation-and-usage-guide)
 
-
-
+To add:
+- OG / multiple Favicon
+- head settings
+- SSG
+- Router seperate
+- Fonts
+- Asset optim
+- Live preview?
+- Multi-lang
+- sitemap
+- Cookiebanner
+- page transitions
+- structured data
+- Netlify 
+- Shopify?
+- Tests?
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

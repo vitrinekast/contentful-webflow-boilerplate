@@ -37,6 +37,19 @@ export const getPage = gql`
   }
 `;
 
+export const getPageSEO = gql`
+  query getPage($slug: String) {
+    pageCollection(limit: 1, where: { slug: $slug }) {
+      items {
+        title
+        slug
+        seoTitle
+        heroTitle
+      }
+    }
+  }
+`;
+
 export const getLocations = gql`
 query {
   contentTypeLocationCollection(order: name_ASC) {
