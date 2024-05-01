@@ -6,30 +6,34 @@ import MapSection from "@/components/map";
 import { notFound } from 'next/navigation'
 
 export async function generateMetadata({ params, searchParams }, parent) {
-
     const { data } = await getClient().query({ query: getPageSEO, variables: { slug: params.slug } });
     const page = data.pageCollection.items[0];
-    // optionally access and extend (rather than replace) parent metadata
+    if (!page) {
+        return {}
+    }
+
     const previousImages = (await parent).openGraph?.images || []
 
     return {
-        title: page.title,
+        robots: {
+            index: page?.noIndex ? true : false,
+            follow: page?.nofollow ? true : false,
+            googleBot: {
+                index: page?.noIndex ? true : false,
+                follow: page?.nofollow ? true : false,
+            },
+        },
         openGraph: {
             images: ['@/ogimage.png', ...previousImages],
             type: "website",
-            locale: "locale",
-            url: "",
-            title: "",
-            description: "",
-            width: "",
-            height: "",
-            alt: "",
+            locale: "TODO",
+            url: "TODO",
+            title: page?.SEOTitle,
+            description: page.SEODescription,
         },
-        description: "This is a description of the page",
-        canonical: "https://www.example.com/canonical",
-        nofollow: "false",
-        noindex: ""
-
+        title: page.SEOTitle,
+        description: page.SEODescription,
+        canonical: page.canonical
     }
 
 }

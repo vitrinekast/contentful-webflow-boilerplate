@@ -15,7 +15,14 @@ export const getPage = gql`
         heroDescription
         ctaTitle
         ctaImage {
-          url
+          url(
+          transform: {
+              width: 100
+              resizeStrategy: FILL
+              resizeFocus: BOTTOM
+              format: WEBP
+            }
+          )
         }
         ctaSubtitle
               ctaLink {
@@ -45,6 +52,8 @@ export const getPageSEO = gql`
         slug
         seoTitle
         heroTitle
+        noIndex,
+        noFollow
       }
     }
   }

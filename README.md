@@ -2,12 +2,8 @@
 Grab your API keys for devlink as described in the [documentation](https://docs.developers.webflow.com/data/docs/devlink-documentation-and-usage-guide)
 
 To add:
-- OG / multiple Favicon
-- head settings
 - SSG
-- Router seperate
 - Fonts
-- Asset optim
 - Live preview?
 - Multi-lang
 - sitemap

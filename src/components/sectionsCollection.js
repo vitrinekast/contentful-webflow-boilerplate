@@ -38,7 +38,13 @@ export default function SectionsCollection({ items }) {
                                     description={documentToHtmlString(section.description.json)}
                                     slot={
                                         section.collection.plantsCollection.items.map((plant, index) => {
-                                            return <SlidePlant key={index} title={plant.name} subtitle={section.collection.name} />
+                                            console.log(plant)
+                                            return <SlidePlant 
+                                                key={index} 
+                                                title={plant.name} 
+                                                subtitle={section.collection.name}
+                                                image={plant.thumbnail.url}
+                                                 />
                                         })
                                     } />
                                 break;

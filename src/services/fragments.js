@@ -29,6 +29,16 @@ export const sliderFields = gql`
             plantsCollection {
                 items {
                     name
+                    thumbnail {
+                        url(
+                        transform: {
+                            width: 400
+                            resizeStrategy: FILL
+                            resizeFocus: BOTTOM
+                            format: WEBP
+                        }
+                    )
+                    }
                 }
             }
         }
@@ -40,7 +50,14 @@ export const sliderFields = gql`
                     json
                 }
                 image {
-                    url
+                    url(
+                        transform: {
+                            width: 100
+                            resizeStrategy: FILL
+                            resizeFocus: BOTTOM
+                            format: WEBP
+                        }
+                    )
                 }
             }
         }
