@@ -4,14 +4,12 @@ Grab your API keys for devlink as described in the [documentation](https://docs.
 To add:
 - SSG
 - Fonts
-- Live preview?
 - Multi-lang
 - sitemap
 - Cookiebanner
 - page transitions
 - structured data
 - Netlify 
-- Shopify?
 - Tests?
 
 
